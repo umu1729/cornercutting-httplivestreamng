@@ -1,0 +1,8 @@
+*.ipynb
+*.ts
+*.m3u8
+*.mp4
+*.npy
+*.npz
+.nfs*
+nohup.out
