@@ -55,9 +55,11 @@ class Frame:
 # The most corner-cutting server
 proc_serv = subprocess.Popen("python -m http.server 8000".split(" "),shell=False)
 
-# Remove older trashes
-proc1 = subprocess.Popen("rm *.m3u8".split(" "),shell=False)
-proc2 = subprocess.Popen("rm *.ts".split(" "),shell=False)
+# Remove older trash files
+for file in os.listdir():
+    tag = file.split(".")[-1]
+    if ( tag == "ts" or tag == "m3u8" ):
+        os.remove( file )
 
 
 head_tmp="""#EXTM3U
