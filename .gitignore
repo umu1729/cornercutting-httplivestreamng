@@ -6,3 +6,4 @@
 *.npz
 .nfs*
 nohup.out
+.ipynb_checkpoints/
